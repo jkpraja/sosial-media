@@ -1,0 +1,6 @@
+https://dl-cdn.alpinelinux.org/alpine/v3.16/main
+https://dl-cdn.alpinelinux.org/alpine/v3.16/community
+# The following repos enabled for PHP 7 on the latest version #
+https://dl-cdn.alpinelinux.org/alpine/edge/main
+https://dl-cdn.alpinelinux.org/alpine/edge/community
+https://dl-cdn.alpinelinux.org/alpine/edge/testing
