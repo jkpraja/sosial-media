@@ -3,9 +3,9 @@ services:
     container_name: web
     image: jkpraja/sosmed-web:${GIT_COMMIT_SHORT}
     ports:
-      - "8081:80"
+      - "80:80"
     depends_on:
       - pesbuk-db
   pesbuk-db:
-    container_name: db
+    container_name: pesbuk-db
     image: jkpraja/sosmed-db:${GIT_COMMIT_SHORT}
