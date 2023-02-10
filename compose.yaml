@@ -1,18 +1,18 @@
 services:
   web:
     container_name: web
-    image: jkpraja/sosmed-web:${GIT_COMMIT_SHORT}
+    image: jkpraja/sosmed-web:latest
     ports:
-      - "80:80"
+      - "8081:80"
     depends_on:
       - pesbuk-db
   pesbuk-db:
     container_name: pesbuk-db
-    image: jkpraja/sosmed-db:${GIT_COMMIT_SHORT}
-    env_file:
-      - env_db.txt
-    environment:
-      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-      - MYSQL_USER=${MYSQL_USER}
-      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-      - MYSQL_DATABASE=${MYSQL_DATABASE}
+    image: jkpraja/sosmed-db:latest
+    #env_file:
+    #  - env_db.txt
+    #environment:
+    #  - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+    #  - MYSQL_USER=${MYSQL_USER}
+    #  - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+    #  - MYSQL_DATABASE=${MYSQL_DATABASE}
