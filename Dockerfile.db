@@ -1,8 +1,8 @@
 FROM mysql:latest
 
-ENV MYSQL_ROOT_PASSWORD=adminadmin1
-ENV MYSQL_DATABASE=dbsosmed
-ENV MYSQL_USER=devopscilsy
-ENV MYSQL_PASSWORD=1234567890
+#ENV MYSQL_ROOT_PASSWORD=adminadmin1
+#ENV MYSQL_DATABASE=dbsosmed
+#ENV MYSQL_USER=devopscilsy
+#ENV MYSQL_PASSWORD=1234567890
 
 COPY dump.sql /docker-entrypoint-initdb.d
