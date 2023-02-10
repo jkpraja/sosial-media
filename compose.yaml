@@ -3,7 +3,7 @@ services:
     container_name: web
     image: jkpraja/sosmed-web:latest
     ports:
-      - "8081:80"
+      - "80:80"
     depends_on:
       - pesbuk-db
   pesbuk-db:
@@ -11,8 +11,8 @@ services:
     image: jkpraja/sosmed-db:latest
     #env_file:
     #  - env_db.txt
-    #environment:
-    #  - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
-    #  - MYSQL_USER=${MYSQL_USER}
-    #  - MYSQL_PASSWORD=${MYSQL_PASSWORD}
-    #  - MYSQL_DATABASE=${MYSQL_DATABASE}
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}
+      - MYSQL_USER=${MYSQL_USER}
+      - MYSQL_PASSWORD=${MYSQL_PASSWORD}
+      - MYSQL_DATABASE=${MYSQL_DATABASE}
