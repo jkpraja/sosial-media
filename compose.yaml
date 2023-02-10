@@ -3,7 +3,7 @@ services:
     container_name: web
     image: jkpraja/sosmed-web:latest
     ports:
-      - "8081:80"
+      - "80:80"
     depends_on:
       - pesbuk-db
   pesbuk-db:
