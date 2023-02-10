@@ -1,0 +1,11 @@
+services:
+  web:
+    container_name: web
+    image: jkpraja/sosmed-web:${GIT_COMMIT_SHORT}
+    ports:
+      - "80:80"
+    depends_on:
+      - pesbuk-db
+  pesbuk-db:
+    container_name: db
+    image: jkpraja/sosmed-db:${GIT_COMMIT_SHORT}
